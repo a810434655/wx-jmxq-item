@@ -1,0 +1,38 @@
+<view class='nav' style='width:100%;height:215px;'> 
+  
+  <image mode="aspectFill" src="/resources/image/head.png"  class="backdrop"></image>
+  <view class="star-opticy" style="height: 215px;"></view>
+  <!-- 顶部状态拦 -->
+  <view class='status' style='height: {{status}}px;'></view>   
+  <!-- 胶囊标题或返回 -->
+  <view class='navbar' style='height:{{navHeight}}px;'> 
+    <view class='back-icon' bindtap='back'>  
+        <image src='{{backIcon}}'></image> 
+    </view>
+  </view>
+  <!-- content -->
+  <view class="content" style="height:{{contentHeight-20}}px;">
+     <view class="content-left">
+       <view class="content-left-image">
+         <image src="/resources/image/head.png"></image>
+       </view>
+       <view class="content-left-text">
+         同校星球
+       </view>
+     </view>
+     <view class="content-right">
+        <view class="content-h1">
+          华东理工王者荣耀进阶群
+        </view>
+        <view class="content-h2">
+           <view class="conetnt-h2-1">125122222人</view>
+           <view class="conetnt-h2-2">999</view>
+        </view>
+        <view class="content-h3">
+        《英雄联盟》还致力于推动全球电子竞技的发展，除了联动各赛区发展职业联赛
+        </view>
+     </view>
+  </view>
+
+  
+ </view>

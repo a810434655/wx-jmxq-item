@@ -1,0 +1,73 @@
+<!--pages/info/info.wxml-->
+<view class="content">
+    <view class="info-top-body" style="background:url('{{info.starAvatar}}') no-repeat;background-size:100% 100%;">
+       <view class="info-top-end" >
+         <image class="info-top-end-image" bindtap="shouye" mode="scaleToFill" src="../../resources/image/sanjiao.png"></image>
+       </view>
+       <view class="info-top-body-ze"></view>
+       <view class="info-top-content">
+         <view class="info-top-content-left">
+            <image mode="aspectFill" src="{{info.starAvatar}}"></image>
+            <view class="info-top-content-view">{{info.categoryName}}星球</view>
+         </view>
+          <view class="info-top-content-right">
+            <view class="info-top-content-title">{{info.starName}}</view>
+            <view class="info-top-content-text">
+                <view class="info-top-content-one">{{info.peopleNumber}}个人</view>
+                <view class="info-top-content-two">{{info.activityNumber}}个活动</view>
+            </view>
+             <view class="info-top-content-neirong">
+              {{info.description}}
+             </view>
+         </view>
+       </view>
+       <view class="info-lunbo" wx:if="{{info.publishActivity==0}}"></view>
+       <view class="info-swiper" wx:if="{{info.publishActivity==1}}">
+          <swiper wx:if="{{info.activityData.length >= 2}}" indicator-dots	 class="swiper-box" easing-function="default" circular="true"  autoplay="false" interval="5000" duration="500" style='height:320rpx' circular='true'>
+              <block wx:for="{{info.activityData}}" wx:key="">
+                <swiper-item>
+                  <image mode='aspectFill' src="{{item.bannerUrl}}" style='width:100%;height:100%;border-top-left-radius:40rpx;border-top-right-radius:40rpx;'  data-item="{{index}}" bindtap='openBanner'></image>
+                </swiper-item>
+              </block>
+            </swiper>
+            <view class="info-swiper-one" wx:if="{{info.activityData.length == 1 && info.publishActivity==1}}">
+              <view class="info-swiper-one-block" wx:for="{{info.activityData}}" wx:key="{{index}}">
+                  <image mode='aspectFill' src="{{item.bannerUrl}}" style='width:100%;height:100%;border-top-left-radius:40rpx;border-top-right-radius:40rpx;'  data-item="{{index}}" bindtap='openBanner'></image>
+              </view>  
+            </view>
+       </view>
+    </view>
+    
+    <view class="info-detail" style="top:{{info.publishActivity==0?'440rpx':'685rpx'}};">
+      <image mode="widthFix" style="width:750rpx;" src="{{info.detail}}"></image>
+    </view>
+   
+     <view class="info-footer">
+        <view class="info-footer-qq" bindtap="infoQQ">星球qq社群入口</view>
+        <view class="info-footer-wx" bindtap="infoWx">星球微信社群入口</view>
+     </view>
+
+     <view class="info-association-qq" wx:if="{{qqGroup}}">
+       <image class="info-image-back" src="/resources/image/cardQQ.png"></image>
+       <view class="info-association-qq-div"></view>
+       <view class="info-association-qq-text">
+          <view class="info-association-qq-text-div">{{info.wechatNumber}}</view>
+          <view  class="info-association-qq-image" data-text="{{info.qqNumber}}" bindtap="copyText" style="background-image:url('/resources/image/fuzhi.png');"></view>
+       </view>
+      <view class="info-association-end">
+          <image src="/resources/image/end.png" bindtap="endDele"></image>       
+      </view>
+     </view>
+     <view class="info-association-qq" wx:if="{{wxGroup}}">
+       <image class="info-image-back" src="/resources/image/cardWx.png"></image>
+       <view class="info-association-qq-div"></view>
+       <view class="info-association-qq-text">
+          <view class="info-association-qq-text-div">{{info.qqNumber}}</view>
+          <view  class="info-association-qq-image" data-text="{{info.qqNumber}}" bindtap="copyText" style="background-image:url('/resources/image/fuzhi.png');"></view>
+       </view>
+       <view class="info-association-end" >
+          <image src="/resources/image/end.png" bindtap="endDele"></image>       
+       </view>
+     </view>    
+    <view class="info-shade" wx:if="{{qqGroup || wxGroup}}"></view>
+</view>

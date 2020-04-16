@@ -1,0 +1,4 @@
+<!--pages/img/img.wxml-->
+<view class="page">
+    <image mode="widthFix" src="{{image}}" style="width:750rpx;"></image>
+</view>

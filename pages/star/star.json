@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "nav-name":"/resources/top/nav-home",
+    "i-row": "/resources/dist/row/index",
+    "i-col": "/resources/dist/col/index"
+  },
+  "navigationStyle": "custom"
+
+}

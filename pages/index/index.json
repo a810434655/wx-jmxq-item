@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "星球广场",
+  
+  "usingComponents": {
+    "i-message": "/resources/dist/message/index"
+  }
+}

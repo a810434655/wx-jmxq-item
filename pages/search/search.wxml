@@ -1,0 +1,26 @@
+<!--pages/search/search.wxml-->
+<view class="row">
+  <view class="search-top">
+    <input class="search-input" value="{{starName}}" bindinput="search" bindconfirm="searchEnter" placeholder="请输入星球关键字"></input>
+    <image bindtap="show" src="/resources/image/search.png" ></image>
+  </view> 
+  <scroll-view scroll-y="true" scroll-top="{{scrollTop}}"  style='flex: 1;margin-top:100rpx;padding-bottom: 60rpx;'>
+    <view class="search-li" bindtap="skip" wx:for="{{content}}" data-item="{{index}}" wx:key="index">
+       <view class="search-left">
+           <image mode="scaleToFill" src="{{item.detail}}"></image>
+           <view class="search-info">{{item.categoryName + '星球'}}</view>
+       </view>
+        <view class="search-right">
+           <view class="search-h1">{{item.starName}}</view>
+           <view class="search-h2">
+              <view class="search-number">{{item.peopleNumber==0?'1':item.peopleNumber}}个人</view>
+              <view class="search-numberInfo" >{{item.activityNumber==0?'1':item.activityNumber}}个活动</view>
+           </view>
+           <view class="search-h3">
+              {{item.description}}Dwdwdwa对哇对哇对哇对哇对哇对哇对哇对哇对哇对达瓦达瓦达瓦达瓦达瓦达瓦达瓦阿达哇
+           </view>
+       </view>
+     </view>
+  </scroll-view>
+<i-message id="message" />
+</view>

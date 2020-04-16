@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/info/info",
+    "pages/about/about",
+    "pages/idea/idea",
+    "pages/statepage/statepage",
+    "pages/webview/webview",
+    "pages/search/search",
+    "pages/img/img",
+    "pages/invite/invite",
+    "pages/perfect/perfect",
+    "pages/star/star"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "星球广场",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#b3bdc9",
+    "selectedColor": "#313e51",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "resources/image/xingqiu.png",
+        "selectedIconPath": "resources/image/xingqiu_s.png",
+        "text": "星球广场"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "iconPath": "resources/image/geren.png",
+        "selectedIconPath": "resources/image/geren_s.png",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+   
+}

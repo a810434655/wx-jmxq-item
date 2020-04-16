@@ -1,0 +1,91 @@
+/* pages/invite/invite.wxss */
+.invite-body{
+  height:800rpx;
+  box-shadow: 0px 4px 40px 0px 
+		rgba(58, 57, 81, 0.1);
+	border-radius: 0px 0px 10px 10px;
+}
+.invite-body-top{
+  height: 250rpx;
+  position: relative;
+  padding: 40rpx;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+}
+.invite-body-button{
+  height: 380rpx;
+  padding: 40rpx;
+  border-bottom-right-radius: 20rpx;
+  border-bottom-left-radius: 20rpx;
+}
+.invite-body-top-head{
+  color: #fff;
+  margin-top: 60rpx;
+  
+}
+.invite-body-top-head>image{
+  width: 60rpx;
+  height: 60rpx;
+  vertical-align: middle;
+  border-radius: 30rpx;
+  background: red;
+}
+.invite-body-top-footer{
+  color: #fff;
+  font-size: 30rpx;
+ 
+  word-break: normal;
+  wprl-word:normal;
+}
+.invite-input{
+  color: #000;
+  margin-top: 5rpx;
+  border:none;
+  height: 60rpx;
+  border-bottom: 1px solid #ebebed;
+}
+.invite-region{
+  height: 100rpx;
+  
+}
+.invite-input-phone{
+  height: 100rpx;
+  width: 100%;
+  line-height: 100rpx;
+}
+.invite-heng{
+  width: 1rpx;
+  height: 60rpx;
+  background: #ebebed;
+  margin-top: 20rpx;
+}
+.invite-phone{
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.invite-phone>input{
+  height: 100%;
+  line-height: 100rpx;
+}
+.invite-list{
+  height: 100rpx;
+}
+.invite-list>input{
+  height: 100rpx;
+}
+.invite-input-footer{
+  color: #000;
+  margin-top: 5rpx;
+  border:none;
+  height: 60rpx;
+}
+.invite-posi-image{
+  position: absolute;
+  top: 0px;
+  left: 0rpx;
+  width:100%;
+  height: 100%;
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+  z-index: -1;
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "搜索星球",
+  "usingComponents": {
+   "i-message": "/resources/dist/message/index"
+  }
+}

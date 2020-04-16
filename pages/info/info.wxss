@@ -1,0 +1,380 @@
+
+.content{
+  width: 100%;
+  background: #fff;
+  display:flex;
+  flex-direction: column;
+}
+.info-top-back{
+  width: 100%;
+  height: 440rpx;
+  position: fixed; 
+  top: 0;
+  z-index:9;
+}
+
+
+.info-content-radio{
+  width: 100%;
+  height: 60rpx;
+  background: #fff;
+  position: fixed;
+  z-index:10;
+  top: 390rpx;
+  border-top-left-radius:70rpx;
+  border-top-right-radius:70rpx;
+}
+
+.topTrue{
+  top:490rpx;
+}
+
+.topfalse{
+  top:480rpx;
+}
+
+.info-top-back-image{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 10;
+}
+.info-top-zhezhao{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+  background: rgb(58,57,81);
+  opacity: 0.8;
+}
+
+.info-footer{
+  position: fixed;
+  bottom:20rpx;
+  height: 88rpx;
+  width: 100%;
+  z-index: 9999;
+  text-align: center;
+   color: #fff;
+}
+
+.info-footer-qq{
+  width: 320rpx;
+  height: 100%;
+  float: left;
+  margin-left: 40rpx;
+  background: grey;
+  border-radius: 44rpx;
+  line-height: 88rpx;
+   background: -webkit-linear-gradient(left, rgb(88,163,255) , rgb(123,115,255)); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(left, rgb(88,163,255) , rgb(123,115,255)); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(left, rgb(88,163,255) , rgb(123,115,255)); /* Firefox 3.6 - 15 */
+  background: linear-gradient(left, rgb(88,163,255) , rgb(123,115,255)); /* 标准的语法 */
+}
+
+.info-footer-wx{
+  width: 320rpx;
+  height: 100%;
+  margin-left:30rpx;
+  float: left;
+  background: yellow;
+  border-radius: 44rpx;
+  line-height: 88rpx;
+  background: -webkit-linear-gradient(left, rgb(99,204,144) , rgb(15,194,169)); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(left, rgb(99,204,144) , rgb(15,194,169)); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(left, rgb(99,204,144) , rgb(15,194,169)); /* Firefox 3.6 - 15 */
+  background: linear-gradient(left, rgb(99,204,144) , rgb(15,194,169)); /* 标准的语法 */
+}
+
+.info-top-content{
+  width: 100%;
+  height:310rpx;
+  position:fixed;
+  z-index: 12;
+}
+
+.info-top-left{
+  float:left;
+  width: 30%;
+  height:310rpx;
+}
+
+.info-top-right{
+  float: left;
+  width: 70%;
+  height: 310rpx;
+}
+
+.info-top-end{
+  width: 100%;
+  height: 130rpx;
+  position: relative;
+  z-index: 11;
+}
+
+.info-top-end-image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 80rpx;
+  margin-left: 30rpx;
+}
+
+
+.info-top-left-title{
+  width: 120rpx;
+  height: 44rpx;
+  background: -webkit-linear-gradient(left, rgb(112,132,237) , rgb(119,79,229)); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(left, rgb(112,132,237) , rgb(119,79,229)); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(left, rgb(112,132,237) , rgb(119,79,229)); /* Firefox 3.6 - 15 */
+  background: linear-gradient(left, rgb(112,132,237) , rgb(119,79,229)); /* 标准的语法 */
+  margin-left: 50rpx;
+  margin-top: -30rpx;
+  position: relative;
+  z-index: 10;
+  font-size: 22rpx;
+  text-align: center;
+  line-height: 44rpx;
+  border-radius: 4rpx;
+  color:#fff;
+}
+
+.info-top-right-title{
+  width: 90%;
+  margin-top: 30rpx;
+  font-size: 32rpx;
+  color: #fff;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+
+
+.info-content{
+  background: #fff;
+  position: relative;
+  z-index:8;
+}
+
+.info-content-swiper-list{
+  width: 100%;
+  height: 100rpx;
+  background: rgb(58,57,81);
+  opacity: 0.8;
+}
+
+.info-association-qq{
+  width: 80%;
+  height: 500rpx;
+  position: fixed;
+  top: 30%;
+  left:10%;
+  z-index: 16;
+  border-radius: 25rpx;
+  background-repeat:no-repeat; 
+  background-size:100% 100%;
+  -moz-background-size:100% 100%;
+}
+.info-image-back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+
+.info-association-qq-div{
+   height: 265rpx;
+   width: 100%;
+}
+
+.info-association-qq-text-div{
+  display: inline-block;
+}
+.info-association-qq-text{
+  color: #fff;
+  padding-left:100rpx;
+  font-size: 30rpx;
+  position: relative;
+}
+
+.info-association-qq-image{
+  width: 36rpx;
+  height: 36rpx;
+  position: relative;
+  left: 10rpx;
+  top: 10rpx;
+  display:inline-block;
+  background-repeat:no-repeat; 
+  background-size:100% 100%;
+  -moz-background-size:100% 100%;
+}
+.info-association-end{
+  width: 100%;
+  text-align: center;
+}
+.info-association-end>image{
+  width: 70rpx;
+  height: 70rpx;
+  
+}
+.info-shade{
+  width: 100%;
+  height:100%;
+  position: fixed;
+  z-index: 15;
+  top: 0;
+  opacity: 0.3;
+  background: #000;
+}
+.info-association-end{
+  position: relative;
+  top:220rpx;
+}
+.info-top-body{
+  width: 100%;
+  height: 440rpx;
+  position: fixed;
+  top: 0rpx;
+  left:0rpx;
+  z-index: 5;
+}
+.info-top-body-ze{
+  width: 100%;
+  height:440rpx;
+  background: rgb(58,57,81);
+  opacity: 0.8;
+  position:absolute;
+  top: 0;
+  left: 0;
+}
+.info-top-content{
+  width: 100%;
+  height: 200rpx;
+}
+.info-top-content-left{
+  width: 25%;
+  padding-left: 40rpx;
+  margin-top: 30rpx;
+  float: left;
+}
+.info-top-content-left>image{
+  width: 140rpx;
+  height: 140rpx;
+  border-top-left-radius:70rpx;
+  border-top-right-radiusz:4rpx;
+  border-bottom-left-radius: 70rpx;
+  border-bottom-right-radius: 70rpx;
+  border:8rpx solid rgb(255,255,255);
+}
+.info-top-content-view{
+  width: 130rpx;
+  height: 48rpx;
+  background: red;
+  margin-top: -30rpx;
+  position: relative;
+  margin-left: 10rpx;
+  background: -webkit-linear-gradient(left, rgb(112,132,237) , rgb(119,79,229)); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(left, rgb(112,132,237) , rgb(119,79,229)); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(left, rgb(112,132,237) , rgb(119,79,229)); /* Firefox 3.6 - 15 */
+  background: linear-gradient(left, rgb(112,132,237) , rgb(119,79,229)); /* 标准的语法 */
+  color: #fff;
+  text-align: center;
+  font-size: 24rpx;
+  line-height: 48rpx;
+}
+.info-top-content-right{
+   float: left;
+   width: 60%;
+   height: 100%;
+   margin-top: 30rpx;
+}
+.info-top-content-title{
+   color: #fff;
+   font-size: 38rpx;  
+}
+.info-top-content-text{
+  width: 100%;
+  height: 38rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+.info-top-content-one{
+  min-width: 100rpx;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  height: 38rpx;
+  background: -webkit-linear-gradient(left, rgb(255,174,131) , rgb(255,134,122)); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(left, rgb(255,174,131) , rgb(255,134,122)); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(left, rgb(255,174,131) , rgb(255,134,122)); /* Firefox 3.6 - 15 */
+  background: linear-gradient(left, rgb(255,174,131) , rgb(255,134,122)); /* 标准的语法 */
+  border-radius: 4rpx;
+  line-height: 38rpx;
+  font-size: 22rpx;
+  text-align: center;
+  color: #fff;
+  float: left;
+}
+.info-top-content-two{
+  min-width: 100rpx;
+  padding:0rpx 5rpx;
+   padding-left: 10rpx;
+  padding-right: 10rpx;
+  height: 38rpx;
+  background: -webkit-linear-gradient(left, rgb(99,204,144) , rgb(15,194,169)); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(left, rgb(99,204,144) , rgb(15,194,169)); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(left, rgb(99,204,144) , rgb(15,194,169)); /* Firefox 3.6 - 15 */
+  background: linear-gradient(left, rgb(99,204,144) , rgb(15,194,169)); /* 标准的语法 */
+  border-radius: 4rpx;
+  line-height: 38rpx;
+  float: left;
+  margin-left: 5%;
+  font-size: 22rpx;
+  text-align: center;
+  color: #fff;
+}
+.info-top-content-neirong{
+  width: 100%;
+  color: #fff;
+  overflow: hidden;
+  font-size: 24rpx;
+  font-weight: 100;
+  height: 60rpx;
+}
+.info-detail{
+  width: 100%;
+  min-height: 100rpx;
+  position: relative;
+  background: #fff;
+
+}
+.info-lunbo{
+  width: 100%;
+  height: 72rpx;
+  z-index: 10;
+  position: relative;
+  top: 240rpx;
+  border-top-left-radius: 40rpx;
+  border-top-right-radius: 40rpx;
+  background: #fff;
+}
+.info-swiper{
+  width: 100%;
+  height: 320rpx;
+  z-index: 10;
+  position: relative;
+  top: 240rpx;
+  border-top-left-radius: 40rpx;
+  border-top-right-radius: 40rpx;
+}
+.info-swiper-one{
+  width: 100%;
+  height: 100%;
+}
+.info-swiper-one-block{
+  width: 100%;
+  height: 100%;
+}
+.info-swiper-one>image{
+  width: 100%;
+  height: 100%;
+}

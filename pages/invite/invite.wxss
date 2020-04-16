@@ -1,0 +1,126 @@
+  /* pages/invite/invite.wxss */
+  .invite-body{
+    height:750rpx;
+    box-shadow: 0px 4px 40px 0px 
+      rgba(58, 57, 81, 0.1);
+    border-radius: 0px 0px 10px 10px;
+  }
+  .invite-body-top{
+    height: 250rpx;
+    position: relative;
+    padding: 40rpx;
+    border-top-left-radius: 20rpx;
+    border-top-right-radius: 20rpx;
+  }
+  .invite-body-button{
+    height: 285rpx;
+    padding: 40rpx;
+    border-bottom-right-radius: 20rpx;
+    border-bottom-left-radius: 20rpx;
+  }
+  .invite-body-top-head{
+    color: #fff;
+    margin-top: 60rpx;
+    
+  }
+  .invite-body-top-head>image{
+    width: 60rpx;
+    height: 60rpx;
+    vertical-align: middle;
+    border-radius: 30rpx;
+  }
+  .invite-body-top-footer{
+    color: #fff;
+    font-size: 30rpx;
+    margin-top: 30rpx;
+  }
+  .invite-input{
+    color: #000;
+    margin-top: 5rpx;
+    border:none;
+    height: 100rpx;
+    border-bottom: 1px solid #ebebed;
+  }
+  .invite-region{
+    height: 100rpx;
+    
+  }
+  .invite-input-phone{
+    height: 100rpx;
+    width: 100%;
+    line-height: 100rpx;
+  }
+  .invite-heng{
+    width: 1rpx;
+    height: 60rpx;
+    background: #ebebed;
+    margin-top: 20rpx;
+  }
+  .invite-phone{
+    height: 100rpx;
+    line-height: 100rpx;
+  }
+  .invite-phone>input{
+    height: 100%;
+    line-height: 100rpx;
+  }
+  .invite-posi-image{
+    position: absolute;
+    top: 0px;
+    left: 0rpx;
+    width:100%;
+    height: 100%;
+    border-top-left-radius: 10rpx;
+    border-top-right-radius: 10rpx;
+    z-index: -1;
+  }
+  .invite-button{
+    height: 100%;
+    line-height: 100rpx;
+    font-family: SourceHanSansCN-Medium;
+    font-size: 28rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 2rpx;
+    color: #4b5cff;
+  }
+  .invite-input-two{
+    color: #000;
+    margin-top: 5rpx;
+    border:none;
+    height: 100rpx;
+  }
+  .list-kuang{
+      width:2rpx;
+      height: 60rpx;
+      background: #ebebed;
+      margin-top: 20rpx;
+      text-align: center;
+  }
+  .invite-qujian{
+    width: 100%;
+    height: 100rpx;
+    line-height: 100rpx;
+  }
+  .invite-i-class{
+    border-bottom: 1rpx solid #ebebed;
+  }
+  .page-button-join{
+    width: 100%;
+    height: 100rpx;
+    text-align: center;
+    background-image: linear-gradient(90deg, 
+      #7084ed 0%, 
+      #774fe5 100%);
+    border-radius: 40rpx;
+    font-family: SourceHanSansCN-Bold;
+    font-size: 30rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 100rpx;
+    letter-spacing: 2rpx;
+    color: #ffffff;
+  }
+  .page-button{
+    margin-top: 50rpx;
+  }

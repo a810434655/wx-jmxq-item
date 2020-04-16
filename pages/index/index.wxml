@@ -1,0 +1,59 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="body">
+      <!-- 轮播 -->
+    <view style="height:310rpx;">
+      <i-col span="24">
+        <view>
+        <swiper class="swiper-box"  autoplay="false" interval="5000" indicator-active-color="#fff" duration="500" style='height:310rpx' circular='true'>
+          <block wx:for="{{bannerList}}" wx:key="item.bannerId">
+            <swiper-item>
+              <image mode='aspectFill' src="{{item}}"  style='width:100%;height:100%;'  data-item="{{item}}" bindtap='openBanner'></image>
+            </swiper-item>
+          </block>
+        </swiper>
+        </view>
+      </i-col>
+    </view>  
+      <!-- 搜索框 -->
+    <view style="height:78rpx;">
+        <i-col  span="20" offset="2">
+          <view class="proin">
+            <view class="search">
+              <input class="index-input" value="" bindinput="search" bindconfirm="searchEnter"  placeholder="请输入星球关键字"/>
+              <image class="index-icon" bindtap="searchButton" src="../../resources/image/search.png"></image>
+            </view>
+          </view>
+        </i-col>
+    </view>
+      <!-- 星球内容 -->
+        <view class="info-list" wx:if="{{!flag}}">
+          <!-- list -->
+          <scroll-view scroll-y="true" scroll-top="{{scrollTop}}"  style='flex: 1;margin-top:10rpx;padding-bottom: 60rpx;'>
+           <view class="index-content" data-key="{{index}}" bindtap="skip" wx:for="{{content}}" :key="index">
+            <view class="index-key">
+              <view class="index-left">
+                  <image class="index-image" mode="aspectFill" src="{{item.starAvatar}}"></image>
+                  <view class="index-div">{{item.categoryName}}</view>
+              </view>
+              <view class="index-right">
+                  <view class="index-top">{{item.starName}}</view>
+                  <view class="index-text">
+                  <view class="index-base">{{item.peopleNumber}}人</view> 
+                  <view class="index-green">{{item.activityNumber}}个活动</view> 
+                  </view>
+                  <view class="index-info">
+                    {{item.description}}
+                  </view>
+              </view>
+            </view>
+            </view>
+          </scroll-view>
+        </view>   
+        <view class='index-quexing' wx:if="{{flag}}">
+           <image mode="aspectFit"  src="/resources/image/anomaly.png"></image>
+           <view class="index-te">当前还没有星球信息哦~</view>
+        </view>
+  </view>
+  <i-message id="message" />
+</view>

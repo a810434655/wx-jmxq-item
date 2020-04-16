@@ -1,0 +1,168 @@
+<!--pages/star/star.wxml-->
+<view class="ovf">
+  <view class='nav' style='width:100%;'> 
+      <image mode="aspectFill" src="/resources/image/head.png" style="height:{{height}}rpx;"  class="backdrop"></image>
+      <view class="star-opticy" style="height:{{height}}rpx;"></view>
+      <!-- 顶部状态拦 -->
+      <view class='status' style='height: {{status}}px;'></view>   
+      <!-- 胶囊标题或返回 -->
+      <view class='navbar' style='height:{{navHeight}}px;'> 
+         <view class='back-icon' bindtap='back'>  
+            <image src='/resources/image/left.png'></image> 
+         </view>
+      </view>
+      <!-- content -->
+      <view class="content" style="height:{{contentHeight-80}}rpx;">
+         <view class="content-left">
+            <view class="content-left-image">
+               <image src="/resources/image/head.png"></image>
+            </view>
+            <view class="content-left-text">
+               同校星球
+            </view>
+         </view>
+         <view class="content-right">
+            <view class="content-h1">
+               华东理工王者荣耀进阶群
+            </view>
+            <view class="content-h2">
+               <view class="conetnt-h2-1">125122222人</view>
+               <view class="conetnt-h2-2">999</view>
+            </view>
+            <view class="content-h3">
+            《英雄联盟》还致力于推动全球电子竞技的发展，除了联动各赛区发展职业联赛
+            </view>
+         </view>
+      </view>
+      <view class="star-content">
+        <view class="star-top" style="height:120rpx;">
+           <i-col span="13">
+             <view class="star-flex">
+              <i-col span="5" offset="1">
+                <view class="{{focus == 1?'star-focus-false':'star-focus'}}">动态</view>
+              </i-col>
+              <i-col span="7" offset="1">
+                <view class="{{focus == 2?'star-focus-false':'star-focus'}}">声量榜</view>
+              </i-col>
+              <i-col span="9" offset="1">
+                <view class="{{focus == 3?'star-focus-false':'star-focus'}}">星球活动</view>
+              </i-col>
+             </view>
+           </i-col>
+            <i-col span="11">
+               <view class="star-raido">
+                  <view >
+                     加入星球
+                  </view>
+               </view>
+           </i-col>
+        </view>
+        <i-col span="22" offset="1">
+          <view class="star-dynamic" wx:if="{{focus==1}}">
+            <view class="star-dynamic-list">
+             <i-col span="4">
+               <view class="star-dynamic-list-left">
+                  03-09
+               </view>
+             </i-col>
+             <i-col span="20">
+               <view class="star-dynamic-list-right">
+                  <view class="star-dynamic-h1">
+                     组局【周三晚上9点游泳趴】
+                  </view>
+                  <view class="star-dynamic-h2">
+                     发起人  戳爷迷妹
+                  </view>
+                   <view class="star-dynamic-h3">
+                     参与人
+                     <image src="/resources/image/back.png"></image>
+                     <image src="/resources/image/back.png"></image>
+                     <image src="/resources/image/back.png"></image>
+                     <image src="/resources/image/back.png"></image>
+                     <image src="/resources/image/back.png"></image>
+                     <image src="/resources/image/back.png"></image>
+                  </view>
+               </view>
+             </i-col>
+              
+            </view>
+          
+          </view>
+        </i-col>
+        <i-col span="22" offset="1">
+          <view class="star-volume" wx:if="{{focus == 2}}">
+            <view class="star-volume-left">
+             <i-col span="3" offset="1">
+               <view class="star-volume-h1">
+                  <image src="/resources/image/back.png"></image>
+               </view>
+             </i-col>
+            <i-col span="15" offset="1">
+            <view class="star-volume-h2">
+               <view class="star-volume-h2-1">借口借口</view>
+               <view class="star-volume-h2-2">
+                  <view>自由泳</view>
+                  <view>自由泳</view>
+               </view>
+            </view>
+            </i-col>
+            <i-col span="4">
+              <view class="star-volume-h3">
+                <view>250</view>
+                <view>声量</view>
+              </view>
+            </i-col>
+            </view>
+          </view>
+        </i-col>
+        <i-col span="22" offset="1">
+         <view class="star-activity" wx:if="{{focus == 3}}">
+           <i-col span="8">
+             <view class="star-activity-image">
+               <image src="/resources/image/back.png"></image>
+             </view>
+           </i-col>
+           <i-col span="16">
+              <view class="star-activity-h1"> 
+                贵州大学2018级表演系迎新联欢晚会
+              </view>
+              <view class="star-activity-h2"> 
+                浏览量:12524
+              </view>
+           </i-col>
+         </view>
+         <view class="star-activity" wx:if="{{focus == 3}}">
+           <i-col span="8">
+             <view class="star-activity-image">
+               <image src="/resources/image/back.png"></image>
+             </view>
+           </i-col>
+           <i-col span="16">
+              <view class="star-activity-h1"> 
+                贵州大学2018级表演系迎新联欢晚会
+              </view>
+              <view class="star-activity-h2"> 
+                浏览量:12524
+              </view>
+           </i-col>
+         </view>
+         <view class="star-activity" wx:if="{{focus == 3}}">
+           <i-col span="8">
+             <view class="star-activity-image">
+               <image src="/resources/image/back.png"></image>
+             </view>
+           </i-col>
+           <i-col span="16">
+              <view class="star-activity-h1"> 
+                贵州大学2018级表演系迎
+              </view>
+              <view class="star-activity-h2"> 
+                浏览量:12524
+              </view>
+           </i-col>
+         </view>
+        </i-col>
+      </view>
+  </view>
+</view>  
+<!-- <i-col span="22" offset="1"></i-col> -->

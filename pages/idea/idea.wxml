@@ -1,0 +1,13 @@
+<!--pages/idea/idea.wxml-->
+<view class="idea-content">
+   <view class="idea-top">期待您与我们共同成长</view>
+   <view class="idea-center-content">
+      <textarea placeholder="请填写您的宝贵意见" value="" placeholder-class='c-30' bindinput='changeInput' class="idea-textarea">
+         
+      </textarea>
+   </view>
+   <view class="idea-button">
+     <view class="idea-butt" bindtap="feedback">反馈</view>
+   </view>
+    <i-message id="message" />
+</view>

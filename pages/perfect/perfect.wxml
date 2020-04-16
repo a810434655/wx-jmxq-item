@@ -1,0 +1,52 @@
+    <!--pages/activity/apply.wxml-->
+<view class="container">
+  <view class="page-body" style='z-index:99;margin-top:150rpx;padding-bottom:80rpx;'>
+       <i-row i-class="c-title-28">
+          <i-col i-class="c-title-28" span="20" offset="2">
+              <view class="invite-body ellipsis">
+                  <view class="invite-body-top">
+                     <image class="invite-posi-image" src="/resources/image/backround.png"></image>
+                     <view class="invite-body-top-head c-title-30">
+                       <image src="/resources/image/ic_no_userinfo.png"></image>
+                       聚小芒
+                     </view>
+                     <i-col span="8">
+                      <view class="invite-body-top-footer c-title-30" style="margin-top:20rpx;">
+                      您还没有注册
+                      </view>
+                      <view class="invite-body-top-footer c-title-30">
+                       快完善信息吧
+                      </view>
+                     </i-col>
+                     
+                  </view>
+                  <view class="invite-body-button c-title-24">
+                    <i-col span="24">
+                       <view class="invite-list c-title-26">
+                        <input class='invite-input' placeholder="填写您的昵称" type='text'/>
+                       </view>
+                    </i-col>
+                    <i-col span="24">
+                       <view class="invite-list c-title-26">
+                        <input class='invite-input' placeholder="选择您的性别" type='text'/>
+                       </view>
+                    </i-col>
+                    <i-col span="24">
+                       <view class="invite-list c-title-26">
+                        <input class='invite-input' placeholder="选择您所在学校" type='text'/>
+                       </view>
+                    </i-col>
+                     <i-col span="24">
+                       <view class="invite-list c-title-26">
+                        <input class='invite-input-footer' placeholder="选择您的入学年份" type='text'/>
+                       </view>
+                    </i-col>
+                   
+                  </view>
+              </view>
+          </i-col>
+       </i-row>
+  </view>
+  
+  <i-message id="message" />
+</view>

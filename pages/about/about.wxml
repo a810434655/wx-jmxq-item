@@ -1,0 +1,36 @@
+<view class="content">
+   <view class="about-logo">
+    <image mode="aspectFit" src="/resources/image/ic_logo.png"></image>
+    <view class="about-title">聚芒星球</view>
+    <view class="about-text">V1.0.0</view>
+   </view>
+   <view class="about-content">
+      <view class="about-list" bindtap="ideaTo">
+        <view class="about-list-content">
+        意见反馈
+        </view>
+        <view class="about-list-right">
+           <image src="/resources/image/da.png"></image>
+        </view>
+      </view>
+      <view class="about-list" bindtap="openH5Page" data-url='https://h5.dreamoncampus.com/file/html/privacypolicy.html'>
+        <view class="about-list-content" >
+        隐私保护协议
+        </view>
+        <view class="about-list-right">
+           <image src="/resources/image/da.png"></image>
+        </view>
+      </view>
+      <view class="about-list" bindtap="openH5Page" data-url='https://h5.dreamoncampus.com/file/html/agreement.html'>
+        <view class="about-list-content">
+        平台自律公约
+        </view>
+        <view class="about-list-right">
+           <image src="/resources/image/da.png"></image>
+        </view>
+      </view>
+   </view>
+   <view class="about-footer">
+      <text>贵州聚芒科技有限公司出品</text>
+   </view>
+</view>

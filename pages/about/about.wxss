@@ -1,0 +1,89 @@
+/* pages/my/aboutus.wxss */
+.bfix{
+  padding-left: 40rpx;
+}
+.btn {
+  margin: 0rpx;
+  padding: 0rpx;
+  background: none;
+  border: none;  
+}
+.btn:after {
+  border: none;
+}
+.cell {
+  position:relative;
+  overflow:hidden;
+  margin: 20rpx 20rpx;
+}
+/* .cell-ft{position:relative;text-align:right;display:inline-block;color:#81848e} */
+.cell-ft{content:" ";display:inline-block;width:14rpx;height:14rpx;position:absolute;top:50%;right:10rpx;border-width:2px 2px 0 0;border-color:#b3bdc9;border-style:solid;transform:translateY(-50%) matrix(.71,.71,-.71,.71,0,0)}
+
+
+.about-logo{
+  width: 100%;
+  height: 400rpx;
+  background: #fff;
+  text-align: center;
+}
+.about-logo>image{
+  width:200rpx;
+  height: 200rpx;
+  margin-top: 40rpx;
+}
+
+.content{
+  background: #f4f6f9;
+  position: fixed;
+  width: 100%;
+  height: 100%; 
+}
+.about-title{
+  font-weight: 700;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+}
+.about-text{
+  color: #79828e;
+  font-size: 24rpx;
+  margin-top: 20rpx;
+}
+
+.about-content{
+  margin-top: 30rpx;
+  width: 100%;
+  background: #fff;
+  line-height: 100rpx;
+}
+.about-list{
+ height: 100rpx;
+ font-weight: 100;
+ margin-top: 10rpx;
+}
+.about-list-content{
+  width: 80%;
+  float: left;
+  margin-left: 5%;
+  color: #051c33;
+  font-size: 30rpx;
+  font-weight: 700; 
+}
+.about-list-right{
+  float: right;
+  height: 100%;
+  padding-right: 5%;
+}
+.about-list-right>image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 25rpx;
+}
+
+.about-footer{
+  width: 100%;
+  height: 300rpx;
+  margin-top: 200rpx;
+  text-align: center;
+  color: #79828e;
+  font-size: 24rpx;
+}

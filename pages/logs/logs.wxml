@@ -1,0 +1,66 @@
+<!--logs.wxml-->
+<view  class="row">
+  <view class="container">
+    <view class="logs-top">
+       <image class="logs-image-back" src="/resources/image/back.png"></image>
+        <view class="logs-top-title">个人中心</view>
+        <view class="logs-top-head">
+          <view class="logs-top-head-content">
+            <view class="logs-top-head-img">
+                <image lazy-load src="{{userInfo.avatarUrl?userInfo.avatarUrl:'/resources/image/head.png'}}" class=""></image>
+                <image class="logs-top-head-gender" src="{{userInfo.gender === 0?'/resources/image/woman.png':'/resources/image/man.png'}}"></image>
+            </view>
+              <view class="logs-top-head-name">
+                <view class="logs-top-head-name-top">
+                    {{userInfo.nickName?userInfo.nickName:'Troye Sivan'}}
+                </view>
+            </view>
+            
+          </view>
+        </view>  
+      </view>
+    <view class="logs-content">
+        <view class="logs-content-list">
+          <view class="logs-content-list-center">
+          <button class="logs-button" style="width:100%;height:100%;" open-type="share">
+              <image class="logs-content-icon" mode="scaleToFill" src="/resources/image/haoyou.png"></image>
+              <view class="logs-content-friend">邀请好友</view>
+              <view class="logs-content-sanjiao">
+                    <image src="/resources/image/da.png"></image>
+              </view>
+          </button>
+          </view>
+        </view>
+        <view class="logs-content-list">
+          <view class="logs-content-list-center" bindtap="aboutTap">
+          <image class="logs-content-icon" mode="scaleToFill" src="/resources/image/about.png"></image>
+          <view class="logs-content-friend">关于我们</view>
+          <view class="logs-content-sanjiao">
+                <image src="/resources/image/da.png"></image>
+          </view>
+          </view>
+        </view>
+        <view class="logs-content-list">
+          <view class="logs-content-list-center">
+          <button class="logs-button" style="width:100%;height:100%;" open-type="contact">
+              <image class="logs-content-icon" mode='scaleToFill' src="/resources/image/haoyou.png"></image>
+              <view class="logs-content-friend">联系客服</view>
+              <view class="logs-content-sanjiao">
+                    <image src="/resources/image/da.png"></image>
+              </view>
+          </button>
+          </view>
+        </view>
+    </view>
+  </view>
+  <view class="tanchaung" wx:if="{{flag}}">
+     <image src="/resources/image/logo.png"></image>
+     <view class="tanchuang-title">聚芒校园</view>
+     <view class="tanchuang-text">您暂未授权就聚芒校园小程序获取您的信息，为了能正常使用小程序的功能，请开始「安全授权」并于稍后的弹框中点击「允许」</view>
+     <view class="tanchuang-button">
+       <button open-type="getUserInfo" class="tanchuang-button-now" bindgetuserinfo="getUserInfo"> 安全授权 </button>
+     </view>
+  </view>
+  <view class="zhezhao" wx:if="{{flag}}"></view>
+  
+</view>
