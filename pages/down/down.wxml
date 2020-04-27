@@ -1,0 +1,25 @@
+<!--pages/down/down.wxml-->
+<view>
+  <i-row>
+    <i-col span="24">
+      <view class="down">
+         <image mode="scaleToFill" src="/resources/image/backGround.png"></image>
+      </view>
+    </i-col>
+    <i-col span="24">
+      <view class="down-title" wx:if="{{show}}">
+        <image src="/resources/image/applyfor.png"></image>
+        <view class="down-h1">申请成功，等待审核</view>
+        <view class="down-h2">前往应用商店下载《聚芒星球》，开启更多玩法吧~</view>
+      </view>
+    </i-col>
+     <i-col span="24">
+      <view class="down-title" wx:if="{{flag}}">
+        <image src="/resources/image/appfalse.png"></image>
+        <view class="down-h1">您已是该星球成员,无需再次申请!</view>
+        <view class="down-h2">下载/打开App查看更多组织信息~</view>
+      </view>
+    </i-col>
+  </i-row>
+
+</view>

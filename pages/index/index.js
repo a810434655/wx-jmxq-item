@@ -78,41 +78,33 @@ Page({
     })
   },
   skip:function(e){
-    wx.setStorage({
-      key: 'path',
-      data: "index",
-    })
-    wx.setStorage({
-      key: 'info',
-      data: that.data.content[e.currentTarget.dataset.key],
-    })
     wx.navigateTo({
-      url:"/pages/info/info"
+      url:`/pages/star/star?id=${e.currentTarget.dataset.key}`
     })
   },
   getStar:function(){
     _http.selectPage({page:that.data.page,size:that.data.size})
     .then(res=>{
-      console.log(res)
-      // if(res.data.records.length === 0){
-      //   if(that.data.page == 1){
-      //     that.setData({
-      //       flag: true
-      //     })
-      //   }
-      //   return false
-      // }
-      // res.data.records.forEach(item=>{
-      //   if (item.detail.substring(0, 4) == "img~"){
-      //     item.detail = item.detail.substring(4)
-      //   }
-      //   that.data.content.push(item)
-      // })
-      // that.setData({
-      //   content:that.data.content
-      // })
+      if(res.data.records.length === 0){
+        if(that.data.page == 1){
+          that.setData({
+            flag: true
+          })
+        }
+        return false
+      }
+      res.data.records.forEach(item=>{
+        // if (item.detail.substring(0, 4) == "img~"){
+        //   item.detail = item.detail.substring(4)
+        // }
+        that.data.content.push(item)
+      })
+      that.setData({
+        content:that.data.content
+      })
     })
     .catch(e=>{
+      console.log(e)
       $Message({
         content: "服务器异常",
         type: 'warning'
@@ -122,7 +114,7 @@ Page({
   getBanner:function(e){
     _http.selectByKey({ key:"starWechat"})
     .then(res=>{
-      if (res.length === 0){
+      if (res.data.length === 0){
         wx.hideLoading()
         return false
       }else{

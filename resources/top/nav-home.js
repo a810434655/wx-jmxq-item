@@ -92,7 +92,6 @@ Component({
   }, 
   // 返回事件 
  back: function(){  
-    console.log("牛皮")
     wx.navigateBack({  
       delta: 1  
     })  

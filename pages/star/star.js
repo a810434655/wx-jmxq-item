@@ -1,7 +1,12 @@
 // pages/star/star.js
+const {
+  $Message
+} = require('../../resources/dist/base/index')
+var _http = require("../../utils/http.js")
+const { $Toast } = require('../../resources/dist/base/index');
+
 let that
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -10,7 +15,15 @@ Page({
     navHeight: "",
     contentHeight:"",
     height:"",
-    focus:3
+    focus:2,
+    content:[],
+    dynamic:[],
+    arr:[],
+    Volume:[],
+    Planet:[],
+    page:1,
+    size:5,
+    starId:""
   },
 
   /**
@@ -19,14 +32,20 @@ Page({
   onLoad: function (options) {
     that = this
     that.setNavSize(); 
+    that.setData({
+      starId:options.id
+    })
+    that.getStarId()
+    that.silide()
   },
 
   /**
-   * 生命周期函数--监听页面初次渲染完成
+   * 生命周期函数--监听页面初次渲染 完成
    */
   onReady: function () {
 
   },
+  
 
   /**
    * 生命周期函数--监听页面显示
@@ -63,9 +82,7 @@ Page({
       that.data.height = 490
       contentHeight = 490
     }
-
     contentHeight = contentHeight - (navHeight + statusHeight)*2
-    
     that.setData({  
       status: statusHeight,  
       navHeight: navHeight,
@@ -73,31 +90,127 @@ Page({
       height:that.data.height
     }) 
   }, 
-  // setStyle: function() {  
-  //   var that = this 
-  //   , containerStyle  
-  //   , textStyle  
-  //   , iconStyle;  
-  //   containerStyle = [  
-  //   'background:' + that.data.background  
-  //   ].join(';');  
-  //   textStyle = [  
-  //   'color:' + that.data.color,  
-  //   'font-size:' + that.data.fontSize + 'px' 
-  //   ].join(';');  
-  //   iconStyle = [  
-  //   'width: ' + that.data.iconWidth + 'px',  
-  //   'height: ' + that.data.iconHeight + 'px' 
-  //   ].join(';');  
-  //   that.setData({  
-  //     containerStyle: containerStyle,  
-  //     textStyle: textStyle,  
-  //     iconStyle: iconStyle  
-  //   }) 
-// }, 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
+  // 获取星球详情
+  getStarId(){
+    _http.selectById({starId:that.data.starId})
+    .then(res=>{
+      // console.log(res)
+      if(res.status == 200){
+        that.setData({
+          content:res.data
+        })
+      }else{
+        $Message({
+          content:res.message,  
+          type: 'warning'
+        })
+      }
+    })
+    .catch(e=>{
+      $Message({
+        content:e.message,
+        type: 'warning'
+      })
+    })
+  },
+  getSelectStarPage(){
+    _http.selectStarPage({starId:that.data.starId,page:that.data.page,size:that.data.size})
+    .then(res=>{
+      res.data.records.forEach((item,key)=>{
+        // item.ctime
+        // console.log(item.ctime)
+        let time  = new Date(item.ctime)
+        let M = (time.getMonth() + 1 < 10 ? '0' + (time.getMonth() + 1) : time.getMonth() + 1) + '-';
+        let D = (time.getDate()<10?'0'+ time.getDate():time.getDate());
+        item.ctime = M + D
+        item.jsonData = JSON.parse(item.jsonData)
+        that.data.dynamic.push(item)
+      })
+      that.setData({
+        dynamic:res.data.records
+      })
+    })
+    .catch(e=>{
+      $Message({
+        content:e.message,
+        type: 'warning'
+      })
+    })
+
+  },
+  getSelectVolumePage(){
+    _http.selectVolumePage({starId:that.data.starId,page:that.data.page,size:that.data.size})
+    .then(res=>{
+      res.data.records.forEach(item=>{
+        that.data.Volume.push(item)
+      }) 
+      that.setData({
+        Volume:that.data.Volume
+      })
+
+    })
+    .catch(e=>{
+      $Message({
+        content:e.message,
+        type: 'warning'
+      })
+    })
+  },
+  getSelectPageByStarId(){
+     _http.selectPageByStarId({starId:that.data.starId,page:that.data.page,size:that.data.size})
+     .then(res=>{ 
+       res.data.records.forEach(item=>{
+        that.data.Planet.push(item)
+       })
+       that.setData({
+         Planet:that.data.Planet
+       })
+      //  console.log(that.data.Planet)
+     })
+     .catch(e=>{
+        $Message({
+          content:e.message,
+          type: 'warning'
+        })
+     })
+  },
+  join(){
+    if(that.data.content.joinRule===3){
+       $Toast({
+            content: '该星球暂时不允许加入',
+            type: 'warning'
+        });
+      return false
+    }
+    wx.navigateTo({
+      url:`/pages/invite/invite?starId=${that.data.starId}`
+    })
+  },
+  //  * 生命周期函数--监听页面隐藏
+  //  */
+  tab(e){
+    
+    that.setData({
+      page:1,
+      dynamic:[],
+      Volume:[],
+      Planet:[],
+      focus:e.currentTarget.dataset.id
+    })
+    that.silide()
+  },
+  silide(){
+    if(that.data.focus == 1) that.getSelectStarPage()
+    if(that.data.focus == 2) that.getSelectVolumePage()
+    if(that.data.focus == 3) that.getSelectPageByStarId()
+  },
+  back(){
+    wx.navigateBack({  
+      delta: 1  
+    })
+    this.triggerEvent('back', {back: 1}) 
+  },
+  
   onHide: function () {
 
   },

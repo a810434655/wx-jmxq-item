@@ -1,0 +1,17 @@
+<!--pages/school/school.wxml-->
+<view class="school">
+  <i-col span="24">
+    <view class="school-input">
+       <input valeu="{{name}}" bindinput="search" class="school-input-view" placeholder="请输入关键字搜索"></input>
+    </view>
+  </i-col>
+  <i-col span="24">
+    <view class="school-hr" style="height:20 rpx;"></view>
+  </i-col>
+  <i-col span="24">
+    <view class="school-text" bindtap="skip" wx:for="{{content}}" data-name="{{item.name}}" wx:key="{{index}}"  data-id="{{item.id}}">
+      {{item.name}}
+    </view>
+  </i-col>
+
+</view>

@@ -2,6 +2,8 @@
   "navigationBarTitleText": "星球广场",
   
   "usingComponents": {
-    "i-message": "/resources/dist/message/index"
+    "i-message": "/resources/dist/message/index",
+    "i-row": "/resources/dist/row/index",
+    "i-col": "/resources/dist/col/index"
   }
 }

@@ -11,7 +11,9 @@
     "pages/img/img",
     "pages/invite/invite",
     "pages/perfect/perfect",
-    "pages/star/star"
+    "pages/star/star",
+    "pages/school/school",
+    "pages/down/down"
   ],
   "window": {
     "backgroundTextStyle": "light",

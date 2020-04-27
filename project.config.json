@@ -6,11 +6,11 @@
 	"setting": {
 		"urlCheck": false,
 		"es6": true,
-		"postcss": true,
+		"postcss": false,
 		"minified": true,
 		"newFeature": true,
 		"coverView": true,
-		"autoAudits": false,
+		"autoAudits": true,
 		"showShadowRootInWxmlPanel": true,
 		"scopeDataCheck": false,
 		"checkInvalidKey": true,
@@ -20,7 +20,10 @@
 			"ignore": [],
 			"disablePlugins": [],
 			"outputPath": ""
-		}
+		},
+		"nodeModules": true,
+		"uglifyFileName": true,
+		"remoteDebugLogEnable": false
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.10.2",
@@ -32,6 +35,8 @@
 	"isGameTourist": false,
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
+	"qqappid": "1110361844",
+	"scripts": {},
 	"condition": {
 		"search": {
 			"current": -1,
@@ -92,23 +97,38 @@
 					"scene": null
 				},
 				{
-					"id": 6,
+					"id": 5,
 					"name": "加入星球",
 					"pathName": "pages/invite/invite",
-					"query": "",
+					"query": "starId=2675085250",
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 6,
 					"name": "完善信息",
 					"pathName": "pages/perfect/perfect",
+					"query": "joinRule=2&apply=wupeng&starId=2675085250",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "详情",
+					"pathName": "pages/star/star",
+					"query": "id=2675085250",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "搜索学校",
+					"pathName": "pages/school/school",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "pages/star/star",
-					"pathName": "pages/star/star",
+					"name": "申请页",
+					"pathName": "pages/down/down",
+					"query": "",
 					"scene": null
 				}
 			]

@@ -1,10 +1,10 @@
 module.exports = {
-  // authServer: "http://172.16.10.114/auth",
-  // dreamOnServer: "http://172.16.10.114/dreamon",
-  // dreamActServer: "http://172.16.10.114/dreamact",
-  // ossServer: "http://172.16.10.114/oss",
-  // dreamStarServer: "http://172.16.10.114/dreamstar",
-  // dreamforum: "http://172.16.10.114/dreamforum",
+  // authServer: "http://172.16.20.33/auth",
+  // dreamOnServer: "http://172.16.20.33/dreamon",
+  // dreamActServer: "http://172.16.20.33/dreamact",
+  // ossServer: "http://172.16.20.33/oss",
+  // dreamStarServer: "http://172.16.20.33/dreamstar",
+  // dreamforum: "http://172.16.20.33/dreamforum",
   authServer: "https://api.dreamoncampus.com/auth",
   dreamOnServer: "https://api.dreamoncampus.com/dreamon",
   dreamActServer: "https://api.dreamoncampus.com/dreamact",
@@ -16,5 +16,6 @@ module.exports = {
   // dreamActServer: "http://47.106.174.203/dreamact",
   // ossServer: "http://47.106.174.203/oss",
   // dreamStarServer:"http://47.106.174.203/dreamstar",
-  version: "0.0.2"
+  // dreamforum: "http://47.106.174.203/dreamforum",
+  version: "1.0.0"
 }

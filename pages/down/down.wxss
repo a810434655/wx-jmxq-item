@@ -1,0 +1,54 @@
+/* pages/down/down.wxss */
+
+.down{
+  width: 100%;
+  height: 100vh;
+}
+
+.down>image{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 0;
+  left: 0;
+  top: 0;
+}
+
+.down-title{
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 260rpx;
+  top: 250rpx;
+  left: 0;
+  text-align: center;
+}
+
+.down-h1{
+  font-family: SourceHanSansCN-Medium;
+	font-size: 38rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 30rpx;
+	letter-spacing: 0rpx;
+	color: #ebebed;
+}
+
+
+.down-title>image{
+  width: 240rpx;
+  height: 240rpx;
+  margin-top: 0 auto;
+}
+
+.down-h2{
+  font-family: SourceHanSansCN-Regular;
+	font-size: 24rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 30rpx;
+	letter-spacing: 0rpx;
+	color: #ffffff;
+  opacity: 0.8; 
+  margin-top: 30rpx;
+}

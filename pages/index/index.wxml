@@ -30,24 +30,42 @@
         <view class="info-list" wx:if="{{!flag}}">
           <!-- list -->
           <scroll-view scroll-y="true" scroll-top="{{scrollTop}}"  style='flex: 1;margin-top:10rpx;padding-bottom: 60rpx;'>
-           <view class="index-content" data-key="{{index}}" bindtap="skip" wx:for="{{content}}" :key="index">
-            <view class="index-key">
-              <view class="index-left">
-                  <image class="index-image" mode="aspectFill" src="{{item.starAvatar}}"></image>
-                  <view class="index-div">{{item.categoryName}}</view>
-              </view>
-              <view class="index-right">
-                  <view class="index-top">{{item.starName}}</view>
-                  <view class="index-text">
-                  <view class="index-base">{{item.peopleNumber}}人</view> 
-                  <view class="index-green">{{item.activityNumber}}个活动</view> 
+            <i-col span="22" offset="1">
+              <view class="info-list-content" data-key="{{item.starId}}" wx:for="{{content}}" wx:key="{{index}}" bindtap="skip"> 
+                <i-col span="5" offset="1"> 
+                  <view class="info-left">
+                     <image src="{{item.starAvatar}}"></image>
+                     <view class="info-left-view" wx:if="{{item.starType>=1 && item.starType<=5}}">
+                       {{item.starType==1?'学生组织':item.starType==2?'同校星球':item.starType==3?'同城星球':item.starType==4?'子星球':item.starType==5?'临时星球':''}}
+                     </view>
                   </view>
-                  <view class="index-info">
-                    {{item.description}}
+                </i-col>
+                 <i-col span="17"> 
+                  <view class="info-right">
+                     <i-col span="24"> 
+                      <view class="info-right-h1">
+                          {{item.starName}}
+                      </view>
+                     </i-col> 
+                     <i-col span="24"> 
+                      <view class="info-right-h2">
+                        <view class="info-right-h2-num" wx:if="{{item.peopleNumber>=0}}">
+                          {{item.peopleNumber}}人
+                        </view>
+                        <view class="info-right-h2-game" wx:if="{{item.starTag}}">
+                          {{item.starTag}}
+                        </view>
+                      </view>
+                     </i-col> 
+                     <i-col span="24"> 
+                      <view class="info-right-h3">
+                        {{item.introduction?item.introduction:'该星主很懒,没有写简介哦'}}
+                      </view>
+                     </i-col>
                   </view>
+                </i-col>
               </view>
-            </view>
-            </view>
+            </i-col>
           </scroll-view>
         </view>   
         <view class='index-quexing' wx:if="{{flag}}">
